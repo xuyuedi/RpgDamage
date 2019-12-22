@@ -43,16 +43,52 @@ public class Main extends JavaPlugin implements Listener {
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(label.equalsIgnoreCase("rpghealth")) {
-            if(args.length == 0) {
-                sender.sendMessage("§c§l输入/RpgHealth Reload重载插件");
+        if (label.equalsIgnoreCase("rpghealth")) {
+            if (args.length == 0) {
+                sender.sendMessage(("&6&l&m一一一一一&r " +
+                        "&c&lRpgHealth" + " &6&l&m一一一一一\n&a&L/" + "rpghealth" + " reload " +
+                        "重载配置文件" + "\n&a&L/" + "rpghealth" + " font " +
+                        "查看方案字体" + "\n&6&l&m一一一一一&r " +
+                        "&c&lRpgHealth" + " &6&l&m一一一一一").replace("&","§"));
                 return true;
-            }if(args[0].equalsIgnoreCase("reload")) {
-                this.load();
-                sender.sendMessage("§eRpgHealth重载成功!");
             }
-        }return true;
+            if (args.length == 1) {
+                if (args[0].equalsIgnoreCase("reload")) {
+                    if (!sender.hasPermission("rpghealth.admin")) {
+                        sender.sendMessage("§c你没有权限");
+                        return true;
+                    }
+                    this.load();
+                    sender.sendMessage("§eRpgHealth重载成功!");
+                }
+                if (args[0].equalsIgnoreCase("help")) {
+                    if (!sender.hasPermission("rpghealth.admin")) {
+                        sender.sendMessage("§c你没有权限");
+                        return true;
+                    }
+                    sender.sendMessage(("&6&l&m一一一一一&r " +
+                            "&c&lRpgHealth" + " &6&l&m一一一一一\n&a&L/" + "rpghealth" + " reload " +
+                            "重载配置文件" + "\n&a&L/" + "rpghealth" + " font " +
+                            "查看方案字体" + "\n&6&l&m一一一一一&r " +
+                            "&c&lRpgHealth" + " &6&l&m一一一一一").replace("&","§"));
+                }
+                if (args[0].equalsIgnoreCase("font")) {
+                    if (!sender.hasPermission("rpghealth.admin")) {
+                        sender.sendMessage("§c你没有权限");
+                        return true;
+                    }
+                    sender.sendMessage(("&6&l&m一一一一一&r " +
+                            "&c&l方案字体格式" + " &6&l&m一一一一一\n&b&l方案一:&r" + "䀁 䀂 䀃 䀄 䀅 䀆 䀇 䀈 䀉 䀊" +
+                            "\n&a&b&l方案二" + "鴁 鴂 鴃 鴄 鴅 鴆 鴇 鴈 鴉 鴊" +
+                            "\n&a&b&l方案三" + "䀑 䀒 䀓 䀔 䀕 䀖 䀗 䀘 䀙 䀚" +
+                            "\n&6&l&m一一一一一&r " +
+                            "&c&lRpgHealth" + " &6&l&m一一一一一").replace("&","§"));
+                    }
+                }
+            }
+        return true;
     }
+
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {
@@ -68,6 +104,12 @@ public class Main extends JavaPlugin implements Listener {
                 Name = e.getEntity().getCustomName();
             } else {
                 EntityType Type = e.getEntityType();
+                if (Type == EntityType.BAT) {
+                    Name = "蝙蝠";
+                }
+                if (Type == EntityType.ENDERMITE) {
+                    Name = "末影螨";
+                }
                 if (Type == EntityType.BAT) {
                     Name = "蝙蝠";
                 }
@@ -172,6 +214,9 @@ public class Main extends JavaPlugin implements Listener {
                 }
                 if (Type == EntityType.PARROT) {
                     Name = "鹦鹉";
+                }
+                if (Type == EntityType.GUARDIAN) {
+                    Name = "守卫者";
                 }
                 if (Type == EntityType.PLAYER) {
                     Name = e.getEntity().getName();
