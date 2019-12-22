@@ -1,0 +1,20 @@
+#可用方案 方案一 方案二 方案三 无
+ProGramme: 方案一
+#聊天框伤害显示
+Message: true
+#聊天框伤害显示信息 可用变量 {name} {damage} {maxhealth} {health}
+DamageMessage: '&c[系统] &a你攻击 &e&l{name} &a造成了 &f{damage} &a点伤害!'
+#Title伤害显示
+Title: true
+#Title伤害显示信息 可用变量 {name} {damage} {maxhealth} {health}
+TitleMessage: '                      {damage}'
+#Action伤害显示
+Action: true
+#Action显示信息 可用变量 {name} {damage} {maxhealth} {health}
+ActionMessage: '&a{name} &f{health}/{maxhealth}'
+#全息图伤害显示
+Hologram: true
+#全息图伤害显示信息 可用变量 {name} {damage} {maxhealth} {health}
+HologramMessage: '{damage}'
+#伤害显示是否显示小数
+DisplayDecimal: false

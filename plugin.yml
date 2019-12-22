@@ -1,0 +1,6 @@
+name: RpgHealth
+version: 0.6
+main: com.xyd.health.Main
+commands:
+  RpgHealth:
+    usage: /RpgHealth
