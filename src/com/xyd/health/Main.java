@@ -284,7 +284,7 @@ public class Main extends JavaPlugin implements Listener {
                             bigest = key;
                         }
                     }
-                    if (!(bigest ==null)) {
+                    if(getConfig().getString("MaxDamage."+bigest+".Message") != null){
                         player.sendMessage(getConfig().getString("MaxDamage." + bigest + ".Message").replace("&", "§"));
                     }
                 }
@@ -294,7 +294,7 @@ public class Main extends JavaPlugin implements Listener {
                             bigest = key;
                         }
                     }
-                    if (!(bigest ==null)) {
+                    if(getConfig().getString("MaxDamage."+bigest+".Title") != null){
                         TitleAPI.sendTitle(player, Integer.valueOf(5), Integer.valueOf(10), Integer.valueOf(5), "", this.getConfig().getString("MaxDamage." + bigest + ".Title").replace("&", "§"));
                     }
                 }
@@ -304,7 +304,7 @@ public class Main extends JavaPlugin implements Listener {
                             bigest = key;
                         }
                     }
-                    if (!(bigest == null)) {
+                    if(getConfig().getString("MaxDamage."+bigest+".Sound") != null){
                         player.playSound(player.getLocation(), Sound.valueOf(getConfig().getString("MaxDamage." + bigest + ".Sound")), 2, 2);
                     }
                 }
@@ -357,7 +357,7 @@ public class Main extends JavaPlugin implements Listener {
                             bigest = key;
                         }
                     }
-                    if (!(bigest == null)) {
+                    if(getConfig().getString("MaxDamage."+bigest+".Tagurl") != null){
                         Vexview.tag(player, bigest);
                     }
                 }
