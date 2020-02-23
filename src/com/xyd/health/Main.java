@@ -45,7 +45,7 @@ public class Main extends JavaPlugin implements Listener {
         metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getConsoleSender().sendMessage("======== §eRpgDamage开始启动 §r========");
-        Bukkit.getConsoleSender().sendMessage("§e版本:1.8 作者:玄月/安生");
+        Bukkit.getConsoleSender().sendMessage("§e版本:2.0 作者:玄月/安生");
         Bukkit.getConsoleSender().sendMessage("§f功能:");
         Bukkit.getConsoleSender().sendMessage("§f范围伤害提示√");
         Bukkit.getConsoleSender().sendMessage("§fVexview.tag显示√");
