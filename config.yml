@@ -1,11 +1,21 @@
-#可用方案 方案一 方案二 方案三 无
-ProGramme: 方案一
+#伤害数值自定义格式
+Material:
+  1: '䀁'
+  2: '䀂'
+  3: '䀃'
+  4: '䀄'
+  5: '䀅'
+  6: '䀆'
+  7: '䀇'
+  8: '䀈'
+  9: '䀉'
+  0: '䀊'
 #聊天框伤害显示
 Message: true
 #聊天框伤害显示信息 可用变量 {name} {damage} {maxhealth} {health}
 DamageMessage: '&c[系统] &a你攻击 &e&l{name} &a造成了 &f{damage} &a点伤害!'
 #Title伤害显示
-Title: true
+Title: false
 #Title伤害显示信息 可用变量 {name} {damage} {maxhealth} {health}
 TitleMessage: '                      {damage}'
 #Action伤害显示
@@ -16,5 +26,91 @@ ActionMessage: '&a{name} &f{health}/{maxhealth}'
 Hologram: true
 #全息图伤害显示信息 可用变量 {name} {damage} {maxhealth} {health}
 HologramMessage: '{damage}'
+#普通攻击是否开启音效提示
+Sound: false
+#音效设置
+SoundSend: BLOCK_ANVIL_LAND
 #伤害显示是否显示小数
 DisplayDecimal: false
+#伤害超额设置
+MaxMessage:
+  #是否开启
+  enable: true
+  #聊天框显示信息
+  Message: true
+  #音效
+  Sound: true
+  #Title显示信息
+  Title: true
+Tagimage:
+  #是否开启
+  enable: true
+  #图片的x轴
+  x: 1.2
+  #图片的y轴
+  y: 2
+  #图片的z轴
+  z: 1.2
+  #停留时间
+  time: 5
+#超额伤害列表
+MaxDamage:
+  #伤害在99-200范围时执行↓
+  99:
+    Max: 99999
+    Message: '&c&l打出了巨额伤害！！！！！'
+    Title: '                     &c&l打出了巨额伤害！！！！！'
+    Sound: ENTITY_PLAYER_LEVELUP
+    Tagurl: '[local]broad.png'
+  #伤害在998-1000范围时执行↓
+  998:
+    Max: 1000
+    Message: '&c&l&n一刀999！！！！！'
+    Title: '                     &d&l一刀999！！！！！'
+    Sound: BLOCK_ANVIL_LAND
+    Tagurl: '[local]一刀999.png'
+MobName:
+  BAT: '蝙蝠'
+  ENDERMITE: '末影螨'
+  BLAZE: '烈焰人'
+  CAVE_SPIDER: '洞穴蜘蛛'
+  CHICKEN: '鸡'
+  COW: '牛'
+  CREEPER: '苦力怕'
+  ENDERMAN: '末影人'
+  GHAST: '恶魂'
+  GIANT: '巨人'
+  IRON_GOLEM: '铁傀儡'
+  HORSE: '马'
+  HUSK: '尸壳'
+  LLAMA: '草泥马'
+  MUSHROOM_COW: '哞菇'
+  OCELOT: '豹猫'
+  PIG: '小猪佩奇'
+  PIG_ZOMBIE: '僵尸佩奇'
+  SHEEP: '羊'
+  RABBIT: '兔子'
+  SILVERFISH: '蠢虫'
+  SKELETON: '骷髅'
+  SLIME: '史莱姆'
+  SNOWMAN: '雪人'
+  SPIDER: '蜘蛛'
+  SQUID: '鱿鱼'
+  VILLAGER: '村民'
+  WITCH: '女巫'
+  WITHER: '凋零'
+  WOLF: '狼'
+  ZOMBIE: '僵尸'
+  ZOMBIE_HORSE: '僵尸马'
+  SKELETON_HORSE: '骷髅马'
+  ZOMBIE_VILLAGER: '僵尸村民'
+  POLAR_BEAR: '北极熊'
+  PARROT: '鹦鹉'
+  GUARDIAN: '守卫者'
+help:
+  - '&b&m&L一一一一一一一一一一'
+  - '&e伤害显示插件V1.5'
+  - '&e作者:玄月，安生'
+  - '&e&l/RpgDamage reload&f&l—重载配置文件'
+  - '&e&l/RpgDamage font&f&l—查看材质'
+  - '&b&m&L一一一一一一一一一一'

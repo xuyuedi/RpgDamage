@@ -1,6 +1,6 @@
-name: RpgHealth
-version: 0.6
+name: RpgDamage
+version: 2.0
 main: com.xyd.health.Main
 commands:
-  RpgHealth:
-    usage: /RpgHealth
+  RpgDamage:
+    usage: /RpgDamage
