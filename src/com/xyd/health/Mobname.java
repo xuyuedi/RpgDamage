@@ -1,0 +1,85 @@
+package com.xyd.health;
+
+public class Mobname {
+    public static Mobname name;
+    public static String BAT;
+    public static String ENDERMITE;
+    public static String BLAZE;
+    public static String CAVE_SPIDER;
+    public static String CHICKEN;
+    public static String COW;
+    public static String CREEPER;
+    public static String ENDERMAN ;
+    public static String GHAST;
+    public static String GIANT;
+    public static String IRON_GOLEM;
+    public static String HORSE;
+    public static String HUSK;
+    public static String LLAMA;
+    public static String MUSHROOM_COW;
+    public static String OCELOT;
+    public static String PIG;
+    public static String PIG_ZOMBIE;
+    public static String SHEEP;
+    public static String RABBIT;
+    public static String SILVERFISH;
+    public static String SKELETON ;
+    public static String SLIME;
+    public static String SNOWMAN ;
+    public static String SPIDER;
+    public static String SQUID;
+    public static String VILLAGER;
+    public static String WITCH;
+    public static String WITHER;
+    public static String WOLF;
+    public static String ZOMBIE;
+    public static String ZOMBIE_HORSE;
+    public static String SKELETON_HORSE;
+    public static String ZOMBIE_VILLAGER;
+    public static String POLAR_BEAR;
+    public static String PARROT;
+    public static String GUARDIAN;
+    public static void loadname() {
+        BAT = Main.plugin.getConfig().getString("MobName.BAT");
+        ENDERMITE = Main.plugin.getConfig().getString("MobName.ENDERMITE");
+        BLAZE = Main.plugin.getConfig().getString("MobName.BLAZE");
+        CAVE_SPIDER = Main.plugin.getConfig().getString("MobName.CAVE_SPIDER");
+        CHICKEN = Main.plugin.getConfig().getString("MobName.CHICKEN");
+        COW = Main.plugin.getConfig().getString("MobName.COW");
+        CREEPER = Main.plugin.getConfig().getString("MobName.CREEPER");
+        ENDERMAN = Main.plugin.getConfig().getString("MobName.ENDERMAN");
+        GHAST = Main.plugin.getConfig().getString("MobName.GHAST");
+        GIANT = Main.plugin.getConfig().getString("MobName.GIANT");
+        IRON_GOLEM = Main.plugin.getConfig().getString("MobName.IRON_GOLEM");
+        HORSE = Main.plugin.getConfig().getString("MobName.HORSE");
+        HUSK = Main.plugin.getConfig().getString("MobName.HUSK");
+        LLAMA = Main.plugin.getConfig().getString("MobName.LLAMA");
+        MUSHROOM_COW = Main.plugin.getConfig().getString("MobName.MUSHROOM_COW");
+        OCELOT = Main.plugin.getConfig().getString("MobName.OCELOT");
+        PIG = Main.plugin.getConfig().getString("MobName.PIG");
+        PIG_ZOMBIE = Main.plugin.getConfig().getString("MobName.PIG_ZOMBIE");
+        SHEEP = Main.plugin.getConfig().getString("MobName.SHEEP");
+        RABBIT = Main.plugin.getConfig().getString("MobName.RABBIT");
+        SILVERFISH = Main.plugin.getConfig().getString("MobName.SILVERFISH");
+        SKELETON = Main.plugin.getConfig().getString("MobName.SKELETON");
+        SLIME = Main.plugin.getConfig().getString("MobName.SLIME");
+        SNOWMAN = Main.plugin.getConfig().getString("MobName.SNOWMAN");
+        SPIDER = Main.plugin.getConfig().getString("MobName.SPIDER");
+        SQUID = Main.plugin.getConfig().getString("MobName.SQUID");
+        VILLAGER = Main.plugin.getConfig().getString("MobName.VILLAGER");
+        WITCH = Main.plugin.getConfig().getString("MobName.WITCH");
+        WITHER = Main.plugin.getConfig().getString("MobName.WITHER");
+        WOLF = Main.plugin.getConfig().getString("MobName.WOLF");
+        ZOMBIE = Main.plugin.getConfig().getString("MobName.ZOMBIE");
+        ZOMBIE_HORSE = Main.plugin.getConfig().getString("MobName.ZOMBIE_HORSE");
+        SKELETON_HORSE = Main.plugin.getConfig().getString("MobName.SKELETON_HORSE");
+        ZOMBIE_VILLAGER = Main.plugin.getConfig().getString("MobName.ZOMBIE_VILLAGER");
+        POLAR_BEAR = Main.plugin.getConfig().getString("MobName.POLAR_BEAR");
+        PARROT = Main.plugin.getConfig().getString("MobName.PARROT");
+        GUARDIAN = Main.plugin.getConfig().getString("MobName.GUARDIAN");
+    }
+    public Mobname getName(){
+        loadname();
+        return Mobname.name;
+    }
+}
