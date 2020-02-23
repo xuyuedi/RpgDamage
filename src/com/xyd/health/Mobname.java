@@ -2,6 +2,7 @@ package com.xyd.health;
 
 public class Mobname {
     public static Mobname name;
+    public static String PHANTOM;
     public static String BAT;
     public static String ENDERMITE;
     public static String BLAZE;
@@ -39,8 +40,13 @@ public class Mobname {
     public static String POLAR_BEAR;
     public static String PARROT;
     public static String GUARDIAN;
+    public static String VEX;
+    public static String MAGMA_CUBE;
     public static void loadname() {
+        MAGMA_CUBE = Main.plugin.getConfig().getString("MobName.MAGMA_CUBE");
+        VEX = Main.plugin.getConfig().getString("MobName.VEX");
         BAT = Main.plugin.getConfig().getString("MobName.BAT");
+        PHANTOM = Main.plugin.getConfig().getString("MobName.PHANTOM");
         ENDERMITE = Main.plugin.getConfig().getString("MobName.ENDERMITE");
         BLAZE = Main.plugin.getConfig().getString("MobName.BLAZE");
         CAVE_SPIDER = Main.plugin.getConfig().getString("MobName.CAVE_SPIDER");

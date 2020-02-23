@@ -156,6 +156,12 @@ public class Main extends JavaPlugin implements Listener {
                 if (Type == EntityType.BAT) {
                     Name = Mobname.BAT;
                 }
+				if (Type == EntityType.VEX) {
+                    Name = Mobname.VEX;
+                }
+                if (Type == EntityType.MAGMA_CUBE) {
+                    Name = Mobname.MAGMA_CUBE;
+                }
                 if (Type == EntityType.PHANTOM) {
                     Name = Mobname.PHANTOM;
                 }
