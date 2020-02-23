@@ -107,6 +107,8 @@ MobName:
   POLAR_BEAR: '北极熊'
   PARROT: '鹦鹉'
   GUARDIAN: '守卫者'
+  MAGMA_CUBE: '岩浆怪'
+  VEX: '恼鬼'
 help:
   - '&b&m&L一一一一一一一一一一'
   - '&e伤害显示插件V1.5'
